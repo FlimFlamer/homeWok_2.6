@@ -43,19 +43,19 @@ public class Main {
     public static void task3() {
         System.out.println("Задание 3");
         checkDeliveryDistance(95);
-
     }
     public static int checkDeliveryDistance(int deliveryDistance){
-
+        int delivery = 0;
         if (deliveryDistance > 1 && deliveryDistance <20) {
-            System.out.println("Срок доставки один день");
+            delivery = 1;
         } else
         if (deliveryDistance >= 20 && deliveryDistance < 60) {
-            System.out.println("Срок доставки два дня");
+            delivery = 2;
         } else
         if (deliveryDistance >=60 && deliveryDistance < 100) {
-            System.out.println("Срок доставки три дня");
+            delivery = 3;
         }
+        System.out.println("Потребуется дней: " + delivery);
         return deliveryDistance;
     }
 }
