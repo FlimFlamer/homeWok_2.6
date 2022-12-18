@@ -24,7 +24,7 @@ public class Main {
     public static void task2() {
         System.out.println("Задание 2");
         int currentYear = LocalDate.now().getYear();
-        checkDivece(1,currentYear);
+        checkDivece(1, currentYear);
     }
 
     public static void checkDivece(int clientOs, int clientDeviceYear) {
@@ -42,20 +42,19 @@ public class Main {
 
     public static void task3() {
         System.out.println("Задание 3");
-        checkDeliveryDistance(95);
+        System.out.println("Потребуется дней: " + checkDeliveryDistance(95));
+
     }
-    public static int checkDeliveryDistance(int deliveryDistance){
+
+    public static int checkDeliveryDistance(int deliveryDistance) {
         int delivery = 0;
-        if (deliveryDistance > 1 && deliveryDistance <20) {
+        if (deliveryDistance > 1 && deliveryDistance < 20) {
             delivery = 1;
-        } else
-        if (deliveryDistance >= 20 && deliveryDistance < 60) {
+        } else if (deliveryDistance >= 20 && deliveryDistance < 60) {
             delivery = 2;
-        } else
-        if (deliveryDistance >=60 && deliveryDistance < 100) {
+        } else if (deliveryDistance >= 60 && deliveryDistance < 100) {
             delivery = 3;
         }
-        System.out.println("Потребуется дней: " + delivery);
-        return deliveryDistance;
+        return delivery;
     }
 }
